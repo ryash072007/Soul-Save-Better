@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://b38bkdp8ha8pj"]
+
+[ext_resource type="Script" path="res://Assets/Fade Effect/FadeEffect.gd" id="1_vv55u"]
+
+[node name="FadeEffect" type="CanvasLayer"]
+layer = 100
+script = ExtResource("1_vv55u")
+
+[node name="FadeEffect" type="ColorRect" parent="."]
+offset_top = 8.0
+offset_right = 1024.0
+offset_bottom = 584.0
+mouse_filter = 2
+color = Color(1, 1, 1, 0)

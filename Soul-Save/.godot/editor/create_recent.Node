@@ -1,0 +1,14 @@
+CanvasLayer
+CanvasGroup
+TextureButton
+Node2D
+HBoxContainer
+RichTextLabel
+AudioStreamPlayer
+Sprite2D
+CanvasModulate
+ColorRect
+TileMap
+VisibleOnScreenEnabler2D
+Button
+VBoxContainer

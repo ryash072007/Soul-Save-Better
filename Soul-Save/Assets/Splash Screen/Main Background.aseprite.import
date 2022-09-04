@@ -1,0 +1,13 @@
+[remap]
+
+importer="antonWetzel.importHelper.aseprite.Texture2D"
+type="Texture2D"
+uid="uid://byg2u5udbrvbt"
+valid=false
+
+[deps]
+
+source_file="res://Assets/Splash Screen/Main Background.aseprite"
+[params]
+
+open_editor=0

@@ -1,0 +1,9 @@
+res://Scenes/credit.tscn
+res://Scenes/splash_screen.tscn
+res://Assets/Fade Effect/FadeEffect.tscn
+res://Levels/level_1.tscn
+res://AudioManager.tscn
+res://Assets/Back Button/back_btn.tscn
+res://Assets/Back Button/back_btn.gd
+res://Assets/Fade Effect/FadeEffect.gd
+res://Assets/Back Button/customFade.gd

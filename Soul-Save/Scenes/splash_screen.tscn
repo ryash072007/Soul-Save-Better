@@ -1,0 +1,78 @@
+[gd_scene load_steps=5 format=3 uid="uid://bfki0vea40wi0"]
+
+[ext_resource type="Texture2D" uid="uid://db8ikoxk1kypv" path="res://Assets/Splash Screen/Main Background.png" id="1_4mgpl"]
+[ext_resource type="Script" path="res://Scenes/splash_screen.gd" id="1_b4aa7"]
+[ext_resource type="FontFile" uid="uid://dlov6xb5djjkt" path="res://Assets/Fonts/AttackGraffiti-3zRBM.ttf" id="2_fnbcf"]
+[ext_resource type="FontFile" uid="uid://ciqeq2v3kh8q2" path="res://Assets/Fonts/ChailceNogginRegular-2OXoW.ttf" id="3_mp052"]
+
+[node name="splashScreen" type="Node2D"]
+script = ExtResource("1_b4aa7")
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(512, 288)
+texture = ExtResource("1_4mgpl")
+
+[node name="Title" type="RichTextLabel" parent="."]
+offset_left = 92.0
+offset_top = 124.0
+offset_right = 933.0
+offset_bottom = 267.0
+theme_override_colors/default_color = Color(0.196078, 0.321569, 0.423529, 1)
+theme_override_fonts/normal_font = ExtResource("2_fnbcf")
+theme_override_font_sizes/normal_font_size = 150
+text = "Soul Save"
+scroll_active = false
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+offset_left = 375.0
+offset_top = 279.0
+offset_right = 648.0
+offset_bottom = 476.0
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="playBtn" type="Button" parent="VBoxContainer"]
+offset_top = 14.0
+offset_right = 273.0
+offset_bottom = 57.0
+focus_mode = 0
+theme_override_fonts/font = ExtResource("3_mp052")
+theme_override_font_sizes/font_size = 35
+text = "Play"
+
+[node name="optionBtn" type="Button" parent="VBoxContainer"]
+offset_top = 77.0
+offset_right = 273.0
+offset_bottom = 120.0
+focus_mode = 0
+theme_override_fonts/font = ExtResource("3_mp052")
+theme_override_font_sizes/font_size = 35
+text = "Options"
+
+[node name="creditBtn" type="Button" parent="VBoxContainer"]
+offset_top = 140.0
+offset_right = 273.0
+offset_bottom = 183.0
+focus_mode = 0
+theme_override_fonts/font = ExtResource("3_mp052")
+theme_override_font_sizes/font_size = 35
+text = "Credits"
+
+[node name="Canvas" type="CanvasLayer" parent="."]
+layer = 100
+
+[node name="FadeEffect" type="ColorRect" parent="Canvas"]
+offset_top = 8.0
+offset_right = 1024.0
+offset_bottom = 584.0
+mouse_filter = 2
+color = Color(1, 1, 1, 0)
+
+[connection signal="mouse_entered" from="VBoxContainer/playBtn" to="." method="_playBtn_hovered"]
+[connection signal="mouse_exited" from="VBoxContainer/playBtn" to="." method="_playBtn_not_hovered"]
+[connection signal="pressed" from="VBoxContainer/playBtn" to="." method="_on_play_btn_pressed"]
+[connection signal="mouse_entered" from="VBoxContainer/optionBtn" to="." method="_on_option_btn_mouse_entered"]
+[connection signal="mouse_exited" from="VBoxContainer/optionBtn" to="." method="_on_option_btn_mouse_exited"]
+[connection signal="mouse_entered" from="VBoxContainer/creditBtn" to="." method="_on_credit_btn_mouse_entered"]
+[connection signal="mouse_exited" from="VBoxContainer/creditBtn" to="." method="_on_credit_btn_mouse_exited"]
+[connection signal="pressed" from="VBoxContainer/creditBtn" to="." method="_on_credit_btn_pressed"]

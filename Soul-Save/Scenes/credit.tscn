@@ -1,0 +1,60 @@
+[gd_scene load_steps=5 format=3 uid="uid://bbs04b6qnb6wp"]
+
+[ext_resource type="Texture2D" uid="uid://x1tfjt3j1hw" path="res://Assets/Credit/background.png" id="1_7l5kj"]
+[ext_resource type="PackedScene" uid="uid://b38bkdp8ha8pj" path="res://Assets/Fade Effect/FadeEffect.tscn" id="2_56q45"]
+[ext_resource type="FontFile" uid="uid://dlov6xb5djjkt" path="res://Assets/Fonts/AttackGraffiti-3zRBM.ttf" id="3_lx5fu"]
+[ext_resource type="PackedScene" uid="uid://da5itxidcbx5r" path="res://Assets/Back Button/back_btn.tscn" id="4_6udgm"]
+
+[node name="Credit" type="Node2D"]
+
+[node name="background" type="Sprite2D" parent="."]
+position = Vector2(512, 288)
+texture = ExtResource("1_7l5kj")
+
+[node name="FadeEffect" parent="." instance=ExtResource("2_56q45")]
+
+[node name="Name" type="RichTextLabel" parent="."]
+offset_left = 352.0
+offset_top = 328.0
+offset_right = 352.0
+offset_bottom = 368.0
+theme_override_colors/default_color = Color(0.0235294, 0.0745098, 0.67451, 1)
+theme_override_fonts/normal_font = ExtResource("3_lx5fu")
+theme_override_font_sizes/normal_font_size = 100
+text = "RYASH"
+scroll_active = false
+
+[node name="Title" type="Node2D" parent="."]
+position = Vector2(-64, 16)
+
+[node name="Title" type="RichTextLabel" parent="Title"]
+offset_left = 280.0
+offset_top = 40.0
+offset_right = 280.0
+offset_bottom = 80.0
+theme_override_colors/default_color = Color(0.423529, 0.0235294, 0, 1)
+theme_override_fonts/normal_font = ExtResource("3_lx5fu")
+theme_override_font_sizes/normal_font_size = 225
+text = "C"
+scroll_active = false
+
+[node name="Title2" type="RichTextLabel" parent="Title"]
+offset_left = 384.0
+offset_top = 112.0
+offset_right = 384.0
+offset_bottom = 152.0
+theme_override_colors/default_color = Color(0.423529, 0.0235294, 0, 1)
+theme_override_fonts/normal_font = ExtResource("3_lx5fu")
+theme_override_font_sizes/normal_font_size = 150
+text = "redits"
+scroll_active = false
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+scale = Vector2(0.5, 0.5)
+transform = Transform2D(0.5, 0, 0, 0.5, 0, 0)
+
+[node name="BackBtn" parent="CanvasLayer" instance=ExtResource("4_6udgm")]
+offset_left = 1536.0
+offset_top = 784.0
+offset_right = 1792.0
+offset_bottom = 928.0
